@@ -61,11 +61,11 @@ sub setDate {
 }
 
 sub setVars() {
-	setNetCounts();
+	&setNetCounts();
 	if ($count == 0) {
-		setDate();
-		setIp();
-		setFreeSpace();
+		&setDate();
+		&setIp();
+		&setFreeSpace();
 		$count++;
 		return 1;
 	} else {
@@ -73,22 +73,22 @@ sub setVars() {
 			$count = 0; 
 		}
 		if ($count == 3){
-			setFreeSpace();			
-			setIp();
+			&setFreeSpace();			
+			&setIp();
 			#print "moomin";
 		}
 	}
 }
 
 while($enabled){
-	setVars();
+	&setVars();
 	print STDOUT  "/" . $freeSpace .
 		   " t" . $tcpCount .  
 		   " u" . $udpCount .
 		   " s" . $sshCount .
   		    " " . $ipAddr .
  		    " " . $date;
-	resetVars();
+	&resetVars();
 	if(defined($ARGV[0]) && $ARGV[0] eq 'GNUscreen'){
 		exit();
 	}
