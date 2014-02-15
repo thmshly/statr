@@ -2,7 +2,7 @@
 
 Single argument: 
 <pre>
-	GNUscreen	If specified, prints output and exits (lets screen do the counting).
+	GNUscreen	If specified, prints output once and exits (lets screen do the counting, for example).
 </pre>
 
 It is a little system subjective. Will improve this.
